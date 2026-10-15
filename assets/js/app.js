@@ -227,7 +227,6 @@ let lastY = 0;
 const darkSecs = [$('#hero'), anSec, $('#pull'), $('.stats'), $('.ftr')];
 function headerTick() {
   const y = window.scrollY;
-  hdr.classList.toggle('is-hidden', y > lastY + 4 && y > 300 && !$('#mnav').classList.contains('open'));
   if (y < lastY - 4) hdr.classList.remove('is-hidden');
   lastY = y;
   const probe = 40; let dark = false;

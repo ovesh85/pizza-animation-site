@@ -40,7 +40,7 @@ em.serif,.serif{font-family:var(--f-serif);font-style:italic;font-weight:400}
 .loader{clip-path:inset(0 0 0 0)}
 
 /* ---------- header ---------- */
-.hdr{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:min(1240px,100% - 24px);
+.hdr{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:min(1240px,100% - 24px);
   display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;
   background:rgba(255,246,232,.72);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);
   border:1px solid rgba(30,15,10,.08);box-shadow:0 10px 40px -12px rgba(30,15,10,.25);transition:transform .6s var(--ease),background .4s}
