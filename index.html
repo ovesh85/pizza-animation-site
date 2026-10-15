@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SliceCraft — Wood-fired Pizza, Made in Front of You</title>
+<meta name="description" content="Scroll through the making of a SliceCraft pizza: 48-hour dough, San Marzano sauce, fior di latte and a 90-second wood-fired bake, boxed hot to your door.">
+<meta name="theme-color" content="#E63B2E">
+<meta property="og:title" content="SliceCraft — Wood-fired Pizza">
+<meta property="og:description" content="From dough ball to sealed box, watch your pizza come alive as you scroll.">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/seq/hero/d/001.webp" media="(min-width:860px)">
+<link rel="preload" as="image" href="assets/seq/hero/m/001.webp" media="(max-width:859px)">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span>DRAG</span></div>
+
+<!-- Preloader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <img class="loader__pie" src="assets/img/pizza-top.webp" alt="">
+    <div class="loader__brand">SliceCraft</div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+  <div class="loader__count" id="loaderCount">0</div>
+</div>
+
+<!-- Header -->
+<header class="hdr" id="hdr">
+  <a href="#top" class="logo" aria-label="SliceCraft home">
+    <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 20.5a19 19 0 0 0 18 0L12 2Z" fill="currentColor"/><circle cx="10.5" cy="13" r="1.6" fill="#E63B2E"/><circle cx="14" cy="16.5" r="1.4" fill="#E63B2E"/><circle cx="12.6" cy="9.4" r="1.1" fill="#E63B2E"/></svg></span>
+    <span>Slice<b>Craft</b></span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#making" data-t="The Making"><span>The Making</span></a>
+    <a href="#anatomy" data-t="Anatomy"><span>Anatomy</span></a>
+    <a href="#spin" data-t="Build"><span>Build</span></a>
+    <a href="#menu" data-t="Menu"><span>Menu</span></a>
+    <a href="#visit" data-t="Visit"><span>Visit</span></a>
+  </nav>
+  <div class="hdr__r">
+    <button class="cartbtn" id="cartBtn" aria-label="Your box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5 10.5a2 2 0 0 1-2 1.5h-11a2 2 0 0 1-2-1.5L3 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg><span class="count" id="cartCount">0</span></button>
+    <a href="#menu" class="btn btn--sm magnetic">Order now <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <button class="burger" id="burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="#making">The Making</a><a href="#anatomy">Anatomy</a><a href="#spin">Build yours</a><a href="#menu">Menu</a><a href="#visit">Visit</a>
+</nav>
+
+<main id="top">
+
+<!-- 1. HERO: step inside the shop (scroll-scrubbed) -->
+<section class="film hero" id="hero" data-film data-vh="200">
+  <div class="film__stage">
+    <div class="film__media">
+      <canvas class="film__canvas" data-seq="assets/seq/hero/" data-count="124" aria-label="Walking into the SliceCraft pizzeria"></canvas>
+    </div>
+    <div class="hero__veil"></div>
+    <div class="hero__badge" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text font-family="Bricolage Grotesque" font-weight="800" font-size="12.5" letter-spacing="3.2" fill="currentColor"><textPath href="#circ">WOOD-FIRED • SINCE 2014 • NAPOLI STYLE •</textPath></text></svg>
+      <b>🔥</b>
+    </div>
+    <div class="hero__copy" id="heroCopy">
+      <h1 class="hero__title split" data-split>Fire, dough<br>&amp; a little <em class="serif">amore.</em></h1>
+      <div class="hero__row">
+        <p>Hand-stretched, wood-fired and boxed while it still sings. Scroll to push the door — your table is ready.</p>
+        <a href="#menu" class="btn btn--saffron magnetic">See the menu <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__seat" id="heroSeat"><h3>Take a seat.<br><em class="serif">We'll bring the fire.</em></h3></div>
+    <div class="scrollhint" id="scrollHint"><i></i>Scroll</div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee__track">
+  <span>48-hour dough</span><span>San Marzano tomatoes</span><span>Fior di latte</span><span>485°C wood fire</span><span>90-second bake</span><span>Boxed in 2 minutes</span>
+  <span>48-hour dough</span><span>San Marzano tomatoes</span><span>Fior di latte</span><span>485°C wood fire</span><span>90-second bake</span><span>Boxed in 2 minutes</span>
+</div></div>
+
+<!-- 2. THE MAKING: dough to sealed box (7 scroll-scrubbed clips) -->
+<section class="film making" id="making" data-film data-vh="150">
+  <div class="film__stage">
+    <div class="film__media">
+      <video muted playsinline preload="auto" poster="assets/video/making-1.jpg" data-src="assets/video/making-1.mp4" data-m="assets/video/mobile/making-1.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-2.jpg" data-src="assets/video/making-2.mp4" data-m="assets/video/mobile/making-2.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-3.jpg" data-src="assets/video/making-3.mp4" data-m="assets/video/mobile/making-3.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-4.jpg" data-src="assets/video/making-4.mp4" data-m="assets/video/mobile/making-4.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-5.jpg" data-src="assets/video/making-5.mp4" data-m="assets/video/mobile/making-5.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-6.jpg" data-src="assets/video/making-6.mp4" data-m="assets/video/mobile/making-6.mp4"></video>
+      <video muted playsinline preload="auto" poster="assets/video/making-7.jpg" data-src="assets/video/making-7.mp4" data-m="assets/video/mobile/making-7.mp4"></video>
+    </div>
+    <div class="making__ui">
+      <div class="mk-head">
+        <div><span class="eyebrow">The making</span><h2 class="h2">Dough to door,<br><em class="serif">one scroll.</em></h2></div>
+        <div class="mk-count"><span class="roll" id="mkRoll"><i>01</i></span><small>/ 07</small></div>
+      </div>
+      <article class="mk-card" id="mkCard"><div class="num" id="mkNum">STEP 01</div><h3 id="mkTitle"></h3><p id="mkText"></p><div class="mk-chips" id="mkChips"></div></article>
+      <div class="mk-temp" id="mkTemp"><b><span id="mkTempV">0</span>°C</b><small>Wood-fired dome</small></div>
+      <div class="mk-rail" id="mkRail"></div>
+      <div class="mk-progress" id="mkProgress"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ANATOMY: the pizza explodes into layers -->
+<section class="film anatomy" id="anatomy" data-film data-vh="200">
+  <div class="film__stage">
+    <div class="an-title"><span class="eyebrow" style="color:var(--saffron)">Anatomy of a slice</span><h2 class="h2">Five layers. <em class="serif">Zero shortcuts.</em></h2></div>
+    <div class="an-grid">
+      <div class="an-col an-col--l">
+        <div class="an-tag" data-at=".55"><div class="k">2<small>kcal</small></div><h4>Fresh basil</h4><p>Torn from our own planters after the bake, never before.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+        <div class="an-tag" data-at=".7"><div class="k">142<small>kcal</small></div><h4>Fior di latte</h4><p>Pulled fresh every morning, melts into glossy pools.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+        <div class="an-tag" data-at=".85"><div class="k">186<small>kcal</small></div><h4>48-hour crust</h4><p>Slow-fermented, light, leopard-spotted and airy.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+      </div>
+      <div class="an-video">
+        <video muted playsinline preload="auto" poster="assets/video/anatomy.jpg" data-src="assets/video/anatomy.mp4" data-m="assets/video/mobile/anatomy.mp4"></video>
+      </div>
+      <div class="an-col an-col--r">
+        <div class="an-tag" data-at=".62"><div class="k">96<small>kcal</small></div><h4>Pepperoni &amp; olives</h4><p>Cups and crisps at 485°C, Kalamata olives for the salt.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+        <div class="an-tag" data-at=".78"><div class="k">38<small>kcal</small></div><h4>San Marzano sauce</h4><p>Crushed by hand with sea salt. Nothing else.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+        <div class="an-tag" data-at=".92"><div class="k">464<small>kcal</small></div><h4>Per 2 slices</h4><p>Honest food. Count it, then have a third.</p><svg class="line" viewBox="0 0 100 2" preserveAspectRatio="none"><line x1="0" y1="1" x2="100" y2="1"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 360 BUILD -->
+<section class="spin" id="spin" style="height:260vh">
+  <div class="spin__stage">
+    <div class="spin__bgword" aria-hidden="true">360°</div>
+    <div class="spin__copy">
+      <span class="eyebrow">Spin it · 360°</span>
+      <h2 class="h2">Every angle,<br><em class="serif">every topping.</em></h2>
+      <p class="lead">Scroll or drag to turn the Pepperoni Inferno. Tap the glowing dots to meet what's on top, then pick your size.</p>
+      <div class="sizes" id="sizes">
+        <button data-s="8" data-p="349">8"<small>Solo</small></button>
+        <button data-s="10" data-p="549" class="on">10"<small>For two</small></button>
+        <button data-s="12" data-p="749">12"<small>Party</small></button>
+      </div>
+      <div class="price"><span>₹<span id="spinPrice">549</span></span><small>incl. taxes</small></div>
+      <button class="btn magnetic" id="spinAdd" data-name="Pepperoni Inferno" data-img="assets/img/menu-pepperoni.jpg">Add to box <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="spin__plate" id="plate">
+      <div class="spin__ring" aria-hidden="true"><svg viewBox="0 0 400 400"><defs><path id="ring" d="M200 200m-186 0a186 186 0 1 1 372 0a186 186 0 1 1-372 0"/></defs><g id="ringG"><text><textPath href="#ring">HAND-STRETCHED • WOOD-FIRED • HAND-STRETCHED • WOOD-FIRED • HAND-STRETCHED • WOOD-FIRED •</textPath></text></g></svg></div>
+      <div class="spin__shadow"></div>
+      <div class="spin__pie" id="pie">
+        <div class="spin__rot" id="rot">
+          <img src="assets/img/pizza-top.webp" alt="Pepperoni Inferno pizza seen from above">
+          <div class="hot" style="left:34%;top:30%"><i></i><div class="lbl"><span>Crispy pepperoni</span></div></div>
+          <div class="hot" style="left:72%;top:42%"><i></i><div class="lbl"><span>Fresh basil</span></div></div>
+          <div class="hot" style="left:46%;top:72%"><i></i><div class="lbl"><span>Kalamata olives</span></div></div>
+          <div class="hot" style="left:90%;top:62%"><i></i><div class="lbl"><span>Leopard crust</span></div></div>
+        </div>
+      </div>
+      <div class="spin__deg"><span id="deg">0</span>°</div>
+      <div class="spin__hint">⟲ Drag to spin</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. THE PULL -->
+<section class="film pull" id="pull" data-film data-vh="170">
+  <div class="film__stage">
+    <div class="film__media">
+      <video muted playsinline preload="auto" poster="assets/video/pull.jpg" data-src="assets/video/pull.mp4" data-m="assets/video/mobile/pull.mp4"></video>
+    </div>
+    <div class="pull__veil"></div>
+    <div class="pull__text" id="pullText">
+      <span class="eyebrow" style="color:var(--saffron)">The pull</span>
+      <div class="pull__big" id="pullA">STRETCH</div>
+      <div class="pull__big stroke" id="pullB">IT OUT.</div>
+    </div>
+    <div class="pull__meta" id="pullMeta"><b>40 cm</b><p>Our record cheese pull. Fior di latte at the perfect melt, every single slice.</p></div>
+  </div>
+</section>
+
+<!-- 6. MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu__head">
+      <div><span class="eyebrow">Signature pies</span><h2 class="h2 split" data-split>Pick your <em class="serif">favourite.</em></h2></div>
+      <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="veg">Veg</button><button data-f="nv">Non-veg</button></div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<div class="marquee marquee--alt" aria-hidden="true"><div class="marquee__track">
+  <span>Hot in 30 minutes</span><span>Sealed fresh</span><span>Order online</span><span>Wood-fired daily</span><span>Hot in 30 minutes</span><span>Sealed fresh</span><span>Order online</span><span>Wood-fired daily</span>
+</div></div>
+
+<!-- 7. STATS -->
+<section class="stats" id="visit">
+  <div class="wrap">
+    <div class="stats__title"><h2 class="h2 split" data-split>Numbers we're <em class="serif">proud of.</em></h2><p class="lead" style="color:rgba(255,246,232,.7)">Small batches, big fire. These are the rules every SliceCraft pizza is made by.</p></div>
+    <div class="stats__grid">
+      <div class="stat"><b data-count="48">0</b><h4>Hour dough</h4><p>Cold-fermented for a light, airy crust.</p></div>
+      <div class="stat"><b data-count="485" data-sup="°C">0</b><h4>Wood fire</h4><p>Our dome oven, fed with oak all day.</p></div>
+      <div class="stat"><b data-count="90" data-sup="s">0</b><h4>Bake time</h4><p>Fast and furious, the Napoli way.</p></div>
+      <div class="stat"><b data-count="30" data-sup="min">0</b><h4>To your door</h4><p>Sealed in our box, still singing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. ORDER BAND with mascot -->
+<section class="order">
+  <div class="wrap">
+    <div class="order__box">
+      <div class="order__copy">
+        <span class="pill"><i></i> Oven is hot · open till 1 AM</span>
+        <h2 class="h2" style="margin-top:18px">That first bite <em class="serif">feeling.</em></h2>
+        <p class="lead">Order now and get your pie sealed in our signature box, hot and fresh in 30 minutes, or it's on us.</p>
+        <div class="order__row">
+          <a href="#menu" class="btn magnetic">Order online <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+910000000000" class="btn btn--ghost">Call the shop</a>
+        </div>
+      </div>
+      <div class="order__vid"><video autoplay muted loop playsinline preload="none" poster="assets/video/mascot.jpg" data-lazy="assets/video/mascot.mp4"></video></div>
+      <div class="sticker"><div><b>30</b><small>MIN OR<br>FREE</small></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <a href="#top" class="logo"><span class="logo__mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 20.5a19 19 0 0 0 18 0L12 2Z" fill="currentColor"/><circle cx="10.5" cy="13" r="1.6" fill="#E63B2E"/><circle cx="14" cy="16.5" r="1.4" fill="#E63B2E"/></svg></span><span>Slice<b>Craft</b></span></a>
+        <p style="opacity:.65;margin-top:14px;max-width:34ch">Wood-fired Neapolitan pizza, made in front of you and sealed for the road.</p>
+        <form class="news" onsubmit="event.preventDefault();toast('You\'re on the list 🍕');this.reset()"><input type="email" required placeholder="Get secret menu drops"><button class="btn btn--sm btn--saffron">Join</button></form>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H8v4h2v6h4v-6h3l1-4h-4V9.5c0-.3.2-.5.5-.5Z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12c0 1.3.1 2.6.4 3.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8ZM10 15V9l5.2 3L10 15Z"/></svg></a>
+        </div>
+      </div>
+      <div><h5>Visit</h5><ul><li>12 Fornace Lane</li><li>Bandra West, Mumbai</li><li><a href="#">Get directions →</a></li></ul></div>
+      <div><h5>Hours</h5><ul><li>Mon–Thu · 12 PM – 12 AM</li><li>Fri–Sun · 12 PM – 1 AM</li><li>Kitchen closes 30 min early</li></ul></div>
+      <div><h5>Explore</h5><ul><li><a href="#making">The Making</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#spin">Build yours</a></li><li><a href="#menu">Menu</a></li></ul></div>
+    </div>
+    <div class="ftr__word" aria-hidden="true">SliceCraft</div>
+    <div class="ftr__bot"><span>© 2026 SliceCraft Pizzeria. All rights reserved.</span><span>Made with fire &amp; flour.</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><img id="toastImg" src="assets/img/menu-pepperoni.jpg" alt=""><span id="toastText">Added to your box</span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
