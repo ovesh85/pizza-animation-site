@@ -42,6 +42,7 @@
     <a href="#spin" data-t="Build"><span>Build</span></a>
     <a href="#menu" data-t="Menu"><span>Menu</span></a>
     <a href="#visit" data-t="Visit"><span>Visit</span></a>
+    <a href="#book" data-t="Book a table"><span>Book a table</span></a>
   </nav>
   <div class="hdr__r">
     <button class="cartbtn" id="cartBtn" aria-label="Your box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5 10.5a2 2 0 0 1-2 1.5h-11a2 2 0 0 1-2-1.5L3 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg><span class="count" id="cartCount">0</span></button>
@@ -50,7 +51,7 @@
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="Mobile">
-  <a href="#making">The Making</a><a href="#anatomy">Anatomy</a><a href="#spin">Build yours</a><a href="#menu">Menu</a><a href="#visit">Visit</a>
+  <a href="#making">The Making</a><a href="#anatomy">Anatomy</a><a href="#spin">Build yours</a><a href="#menu">Menu</a><a href="#visit">Visit</a><a href="#book">Book a table</a>
 </nav>
 
 <main id="top">
@@ -227,6 +228,41 @@
   </div>
 </section>
 
+
+<!-- 9. BOOK A TABLE (design only) -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="book__grid">
+      <div class="book__copy">
+        <span class="eyebrow">Dine in</span>
+        <h2 class="h2" style="margin-top:18px">Book a <em class="serif">table.</em></h2>
+        <p class="lead">Grab a seat by the wood-fired oven and watch your pie get stretched, topped and fired, right in front of you.</p>
+        <ul class="book__perks">
+          <li><b>12 PM – 1 AM</b><span>Seatings daily</span></li>
+          <li><b>Up to 12</b><span>Guests per table</span></li>
+          <li><b>Free</b><span>Cancel up to 2 hrs before</span></li>
+        </ul>
+      </div>
+      <form class="book__form" onsubmit="event.preventDefault();toast('Table request sent 🍕');this.reset()">
+        <div class="bf-row">
+          <label>Name<input type="text" placeholder="Your name" required></label>
+          <label>Phone<input type="tel" placeholder="+91 00000 00000" required></label>
+        </div>
+        <div class="bf-row">
+          <label>Date<input type="date" required></label>
+          <label>Time<select><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option><option>10:00 PM</option><option>11:00 PM</option></select></label>
+        </div>
+        <div class="bf-guests"><span>Guests</span>
+          <div><button type="button" class="on">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6+</button></div>
+        </div>
+        <label>Seating<select><option>By the oven</option><option>Indoor</option><option>Terrace</option></select></label>
+        <label>Special request<textarea rows="2" placeholder="Birthday, high chair, allergies…"></textarea></label>
+        <button class="btn btn--saffron" type="submit">Reserve my table</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="ftr">
@@ -244,10 +280,10 @@
       </div>
       <div><h5>Visit</h5><ul><li>12 Fornace Lane</li><li>Bandra West, Mumbai</li><li><a href="#">Get directions →</a></li></ul></div>
       <div><h5>Hours</h5><ul><li>Mon–Thu · 12 PM – 12 AM</li><li>Fri–Sun · 12 PM – 1 AM</li><li>Kitchen closes 30 min early</li></ul></div>
-      <div><h5>Explore</h5><ul><li><a href="#making">The Making</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#spin">Build yours</a></li><li><a href="#menu">Menu</a></li></ul></div>
+      <div><h5>Explore</h5><ul><li><a href="#making">The Making</a></li><li><a href="#anatomy">Anatomy</a></li><li><a href="#spin">Build yours</a></li><li><a href="#menu">Menu</a></li><li><a href="#book">Book a table</a></li></ul></div>
     </div>
     <div class="ftr__word" aria-hidden="true">SliceCraft</div>
-    <div class="ftr__bot"><span>© 2026 SliceCraft Pizzeria. All rights reserved.</span><span>Made with fire &amp; flour.</span></div>
+    <div class="ftr__bot"><span>Template created by Perception System - design studio.</span></div>
   </div>
 </footer>
 

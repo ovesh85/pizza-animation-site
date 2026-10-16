@@ -388,3 +388,6 @@ const cap = setTimeout(() => real = 1, 7000);
 requestAnimationFrame(loop);
 addEventListener('resize', () => hasGSAP && ScrollTrigger.refresh());
 })();
+
+/* Book a table: guest picker (design only) */
+document.querySelectorAll('.bf-guests button').forEach(b=>b.addEventListener('click',()=>{b.parentNode.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}));
